@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(243, 243, 243);
+
+  &__sideone {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-top: 1rem;
+  }
+
+  &__logo {
+    display: flex;
+    width: 10rem;
+  }
+
+  &__links {
+    color: $green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+  }
+  &__link {
+    &--signin {
+      text-decoration: none;
+      border-radius: 20px;
+      background-color: $blue;
+      color: $beige;
+      padding: 5px 10px;
+    }
+    &--movies {
+      text-decoration: none;
+      color: $blue;
+    }
+    &--tvshows {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+}
