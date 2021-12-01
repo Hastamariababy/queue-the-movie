@@ -1,9 +1,9 @@
-import SigninForm from "../../components/SigninForm/SigninForm";
+import LoginForm from "../../components/LogInForm/LoginForm";
 
 function Profile() {
   return (
     <section>
-      <SigninForm />
+      <LoginForm />
     </section>
   );
 }

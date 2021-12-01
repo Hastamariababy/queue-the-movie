@@ -1,9 +1,9 @@
-import "./SigninForm.scss";
+import "./LoginForm.scss";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-function SigninForm(props) {
+function LoginForm(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   let navigate = useNavigate();
@@ -57,4 +57,4 @@ function SigninForm(props) {
   );
 }
 
-export default SigninForm;
+export default LoginForm;
