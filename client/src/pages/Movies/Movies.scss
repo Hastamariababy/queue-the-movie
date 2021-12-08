@@ -1,0 +1,53 @@
+@import "../../styles/variables";
+.trendingmovies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__left {
+    padding: 0.5rem;
+    &--img {
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    &--ptag {
+      margin: 0;
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+    }
+    &--rating {
+      display: flex;
+      margin: 0;
+      font-size: 24px;
+      justify-content: center;
+    }
+    &--button {
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      background-color: $blue;
+      color: $yellow;
+      font-weight: bold;
+      border: none;
+      height: 2rem;
+    }
+  }
+
+  &__right {
+    padding: 0.5rem;
+    margin: none;
+    &--title {
+      margin: auto;
+      margin-right: 0.5rem;
+    }
+    &--overview {
+      text-align-last: justify;
+      font-size: 15px;
+      margin-bottom: 2rem;
+      margin-right: 0.5rem;
+    }
+  }
+}

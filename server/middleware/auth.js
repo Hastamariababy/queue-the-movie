@@ -2,7 +2,9 @@ const jwt = require("jsonwebtoken");
 
 module.exports = (req, res, next) => {
   try {
+    console.log(req.headers);
     const authHeader = req.headers.authorization;
+    console.log(authHeader);
     const token = authHeader.split(" ")[1];
     if (!token) {
       return res.status(403).json({ message: "No token. Unauthorized." });
@@ -12,9 +14,11 @@ module.exports = (req, res, next) => {
       console.log(req.decode);
 
       req.user = req.decode.email;
+      console.log(req.user);
       next();
     }
   } catch (error) {
-    res.status(401).json({ message: "Authentication failed!" });
+    console.log(error);
+    res.status(401).json(error);
   }
 };

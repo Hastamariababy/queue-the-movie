@@ -51,7 +51,9 @@ function LoginForm(props) {
         <p className="form__signup--ptag">
           Keep track of all movies and shows you want to watch!
         </p>
-        <button className="form__signup--button">Sign Up</button>
+        <button className="form__signup--button">
+          <Link to="/signup">Sign Up</Link>
+        </button>
       </section>
     </form>
   );

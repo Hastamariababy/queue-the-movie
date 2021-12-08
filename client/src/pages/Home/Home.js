@@ -1,9 +1,11 @@
 import "../Home/Home.scss";
+import WatchList from "../../components/WatchList/WatchList";
 
-function Home() {
+function Home({ queueList }) {
   return (
     <section className="home">
-      <p>Home, we will get a carosel with movies to pick</p>
+      <h3>What will you watch next?</h3>
+      <WatchList />
     </section>
   );
 }

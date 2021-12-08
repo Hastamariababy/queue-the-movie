@@ -23,7 +23,7 @@ function Navbar() {
             </Link>
           </li>
           <li className="navbar__link">
-            <Link className="navbar__link--signin" to="/signin">
+            <Link className="navbar__link--signin" to="/login">
               Sign In
             </Link>
           </li>
