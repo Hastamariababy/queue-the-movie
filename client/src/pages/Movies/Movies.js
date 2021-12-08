@@ -36,7 +36,7 @@ function Movies({ DataisLoaded, items }) {
 
   return (
     <section className="trendingmovies">
-      <h1 className="trendingmovies__h1"> Trending Movies </h1>
+      <h1 className="trendingmovies__h1"> Movies </h1>
 
       {items.map((item) => (
         <div className="trendingmovies__list" key={item.id}>

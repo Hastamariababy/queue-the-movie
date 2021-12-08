@@ -10,6 +10,18 @@ const WatchList = () => {
       setpqueueList(response.data);
     });
   }, []);
+
+  const handledel = (id) => {
+    console.log(id);
+    axios
+      .delete(`http://localhost:8080/queue/${id}`)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className="queue">
       {pqueueList &&
@@ -17,14 +29,18 @@ const WatchList = () => {
           console.log(movie);
           return (
             <div className="queue__list" key={movie.id}>
-              <input
-                className="queue__checkbox"
-                type="checkbox"
-                id="myCheck"
-                onclick="myFunction()"
-              />
-
-              <p className="queue__title">{movie.title}</p>
+              <label for="inputName" class="col-md-1 control-label" />
+              <div class="queue__checkbx">
+                <input
+                  type="checkbox"
+                  name="packersOff"
+                  id="queue__checkbox"
+                  value="1"
+                />
+                <label for="packers" class="strikethrough">
+                  {movie.title}
+                </label>
+              </div>
             </div>
           );
         })}

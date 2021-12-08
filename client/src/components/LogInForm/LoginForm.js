@@ -16,7 +16,7 @@ function LoginForm(props) {
   }
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h1 className="form__h1">Log In</h1>
+      <h1 className="form__h1">Sign In</h1>
       <section className="form__inputs">
         <label className="form__input--label">
           Email
@@ -41,7 +41,7 @@ function LoginForm(props) {
       </section>
       <section className="form__buttons">
         <button type="submit" className="form__buttons--login">
-          Log In
+          Sign In
         </button>
         <Link to="/home" className="form__buttons--cancel">
           Cancel

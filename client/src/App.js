@@ -81,7 +81,7 @@ function App() {
           }
         ></Route>
         <Route path="/tvshows" element={<TvShows />} />
-        <Route path="/login" element={<LoginForm />} />
+        <Route path="/signin" element={<LoginForm />} />
         <Route
           path="/signup"
           element={<SignUpform handleSignIn={handleSignIn} />}

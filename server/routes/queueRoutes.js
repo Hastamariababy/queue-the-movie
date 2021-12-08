@@ -31,6 +31,13 @@ router.get(`/:id`, (req, res) => {
   res.json(videos);
 });
 
+router.delete("/:id", (req, res) => {
+  const movie = queueList.find((vid) => {
+    return vid.id === req.params.id;
+  });
+  res.json(movie);
+});
+
 router.post(`/home`, (req, res) => {
   const movie = {
     userId: req.body.userId,

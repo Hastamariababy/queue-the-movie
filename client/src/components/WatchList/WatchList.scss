@@ -20,3 +20,11 @@
     color: black;
   }
 }
+
+input[type="checkbox"]:checked + label.strikethrough {
+  text-decoration: line-through;
+}
+
+#queue__checkbox {
+  margin: 0 1rem;
+}
