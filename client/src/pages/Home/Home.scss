@@ -3,4 +3,12 @@
 
 .home {
   background-color: $yellow;
+  height: 20rem;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem;
+  }
 }

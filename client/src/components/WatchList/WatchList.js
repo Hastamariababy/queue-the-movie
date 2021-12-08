@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import "./WatchList.scss";
 
 const WatchList = () => {
   const [pqueueList, setpqueueList] = useState(false);
@@ -10,13 +11,20 @@ const WatchList = () => {
     });
   }, []);
   return (
-    <div>
+    <div className="queue">
       {pqueueList &&
         pqueueList.map((movie) => {
           console.log(movie);
           return (
-            <div key={movie.id}>
-              <p>{movie.title}</p>
+            <div className="queue__list" key={movie.id}>
+              <input
+                className="queue__checkbox"
+                type="checkbox"
+                id="myCheck"
+                onclick="myFunction()"
+              />
+
+              <p className="queue__title">{movie.title}</p>
             </div>
           );
         })}
@@ -24,24 +32,4 @@ const WatchList = () => {
   );
 };
 
-// import { Link } from "react-router-dom";
-
-// const WatchList = ({ movies, setMovies }) => {
-//   return (
-//     <ul className="video-queue">
-//       {movies.queueList
-//         .filter((item) => {
-//           return item.id !== movies.currentVid.id;
-//         })
-//         .map((movie) => {
-//           return (
-//             <li key={movie.id}>
-//               // <li>{movie.title}</li>
-//               //{" "}
-//             </li>
-//           );
-//         })}
-//     </ul>
-//   );
-// };
 export default WatchList;

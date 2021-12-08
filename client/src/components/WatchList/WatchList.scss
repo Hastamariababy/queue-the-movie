@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+
+.queue {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__checkbox {
+    margin: 0.5rem;
+  }
+
+  &__title {
+    margin: 0 0.5rem;
+    color: black;
+  }
+}

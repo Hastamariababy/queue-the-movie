@@ -30,7 +30,7 @@ function TvShows({ DataisLoaded, items }) {
   if (!DataisLoaded)
     return (
       <div>
-        <h1> loading.... </h1>
+        <h1 className="tvshows__loading"> Tv Show Feature Coming Soon! </h1>
       </div>
     );
 
